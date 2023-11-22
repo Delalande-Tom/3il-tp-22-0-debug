@@ -20,7 +20,7 @@ public class Main {
         }
 
         // Problème 4
-        String message = "Bonjour";
+        String message = "Bonjour comment ça va";
         System.out.println("Longueur du message : " + message.length());
         char character = message.charAt(10);
         System.out.println("Caractère à l'indice 10 : " + character);
@@ -28,11 +28,16 @@ public class Main {
         // Problème 5
         String str1 = "Hello";
         String str2 = new String("Hello");
-        System.out.println("Comparaison de chaînes : " + (str1 == str2));
+        System.out.println("Comparaison de chaînes : " + (str1.equals(str2)));
 
         // Problème 6
         Main mainObj = null;
-        mainObj.method();
+        try {
+        	mainObj.method();
+        }
+        catch(NullPointerException e) {
+        	System.out.println("bah non ^^' ");
+        }
     }
 
     // Méthode pour le problème de division par zéro
