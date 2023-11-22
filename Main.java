@@ -8,6 +8,7 @@ public class Main {
         }
 
         // Problème 2
+        // catch division par 0 = 0
         double result = calculateValue(5, 0);
         System.out.println("Result: " + result);
 
@@ -15,7 +16,7 @@ public class Main {
         int count = 10;
         while (count > 0) {
             System.out.println("Count: " + count);
-            count += 2;
+            count -= 2;
         }
 
         // Problème 4
@@ -36,7 +37,12 @@ public class Main {
 
     // Méthode pour le problème de division par zéro
     public static int calculateValue(int a, int b) {
-        return a / b;
+        try {
+        	return a / b;
+        }
+        catch(ArithmeticException e) {
+        	return 0;
+        }
     }
 
     // Méthode pour le problème d'utilisation incorrecte d'une méthode de classe
